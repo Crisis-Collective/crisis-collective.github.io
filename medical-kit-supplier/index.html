@@ -1,3 +1,5 @@
+<!--https://docs.google.com/forms/d/e/1FAIpQLSdW1rSs_JjaMiZU6jxIRlMnE6fip_jkbKfUWNSg9StK4dmpcg/formresponse--!>
+
 <!-- https://docs.google.com/forms/d/e/1FAIpQLSfq8T4r9krErmL8NPU1C9ke-Xgh5TYaSJkuCoAXlS4RDbzquw/viewform --!>
 <!DOCTYPE html>
 <html>
@@ -11,11 +13,16 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400|Oswald:500&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- SweetAlert --!>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+
   </head>
   <style>
     footer {
@@ -137,16 +144,16 @@ var fundingOpts = ['No Funding Required', '50% Funding Required', 'Full Funding 
       };
 
 
-      var OrgEnt = "entry.1885986903";
-      var NameEnt = "entry.367181357";
-      var NumEnt = "entry.213100973";
-      var EmailEnt = "entry.806756113";
-      var DesEnt = "entry.1000444119";
-      var OffEnt = "entry.14307066";
-      var SupEnt = "entry.494619472";
-      var ProEnt = "entry.1602010152";
-      var QuaEnt = "entry.1630280559";
-      var IndiaEnt = "entry.1194241510";
+      var OrgEnt = "entry.597999226";
+      var NameEnt = "entry.1228614806";
+      var NumEnt = "entry.1684921892";
+      var EmailEnt = "entry.1880794577";
+      var DesEnt = "entry.1961322838";
+      var OffEnt = "entry.84381067";
+      var SupEnt = "entry.856330152";
+      var ProEnt = "entry.921047170";
+      var QuaEnt = "entry.1766431238";
+      var IndiaEnt = "entry.609750623";
 
       var checkedStrings = getCheckedStrings();
       console.log(checkedStrings);
@@ -163,10 +170,17 @@ var fundingOpts = ['No Funding Required', '50% Funding Required', 'Full Funding 
       dirtydata += QuaEnt + "=" + maxquantity + "&";
       dirtydata += IndiaEnt + "=" + yesNo;
       console.log(dirtydata);
-      var url = 'https://docs.google.com/forms/d/e/1FAIpQLSfq8T4r9krErmL8NPU1C9ke-Xgh5TYaSJkuCoAXlS4RDbzquw/formResponse'
-         // var url = 'https://docs.google.com/forms/u/1/d/e/1FAIpQLSdTRnEeyANkJ7vGrIQ01fATIECr0e-aNlKqYL4JMoozsk7N3g/formResponse';
+      // var url = 'https://docs.google.com/forms/d/e/1FAIpQLSfq8T4r9krErmL8NPU1C9ke-Xgh5TYaSJkuCoAXlS4RDbzquw/formResponse'
+      var url = 'https://docs.google.com/forms/u/1/d/e/1FAIpQLSdW1rSs_JjaMiZU6jxIRlMnE6fip_jkbKfUWNSg9StK4dmpcg/formResponse';
       postData(url,dirtydata)
-       
+      Swal.fire({
+        title: 'Success!',
+        text: 'Thank you for sharing the details. Our team will reach out to you soon.',
+        icon: 'success',
+        confirmButtonText: 'OK'
+      }).then(function(){
+        location.reload();
+      });
 
     };
 
@@ -194,7 +208,7 @@ var fundingOpts = ['No Funding Required', '50% Funding Required', 'Full Funding 
     function getCheckedStrings() {
       var cbs = document.getElementsByName("whatsupply");
       var answer = "";
-      var element_val = "entry.442657609";
+      var element_val = "entry.1717342392";
       for(var i=0; i<cbs.length; i++) {
         if(cbs[i].checked)
           answer = answer + '&'+element_val+"="+encodeURIComponent(cbs[i].value);
