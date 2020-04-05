@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8">
     
-    <title>COVID19- PPE Kit Requirement</title>
+    <title>COVID19 - Medical Kit Suppliers</title>
     <meta name="viewport" content="width=device-width">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--fonts -->
@@ -18,7 +18,13 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
   <style>
-    
+    footer {
+      vertical-align:center;
+      text-align:center;
+      font-size:0.5em;
+      text-align:center;
+    }
+
     label{
       font-family: 'Montserrat', sans-serif;
       font-size: 1em;
@@ -55,6 +61,46 @@
     .checkbox-label {
       font-size:0.75em;
     }
+
+    .text-box {
+      background: inherit;
+      color: #000000;
+      border: none;
+      border-top: none;
+      border-bottom: 2px solid #434343;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      max-width: 100% !important;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    .dropdown {
+      width:auto !important;
+    }
+
+    .dropdownlabel {
+      float:left;
+      margin-right: 0.3em;
+    }
+
+    @media only screen and (max-width: 600px) {
+      footer {
+        font-size:0.7em;
+      }
+      body {
+        font-size: 15px;
+      }
+      .dropdown {
+        float:right;
+      }
+      .dropdownlabel {
+        margin-right:0px;
+      }
+    }
+
   </style>
   <script>
 
@@ -194,42 +240,42 @@ var fundingOpts = ['No Funding Required', '50% Funding Required', 'Full Funding 
       <div class="col-ld-4">
         <div class="container">
           
-          <p class="lead" style="text-align:center;padding:5%"><h1 style="font-size: 3em; font-family:Oswald;color:#ED1F24;">COVID19 - Medical Kit Supplier</h1></p>
+          <h1 style="font-family:Oswald;color:#ED1F24;">COVID19 - Medical Kit Supplier</h1>
 
           <form id="mainForm">
             <div class="form-group">
               <label for="exampleInputEmail1">Organization Name</label>
-              <input type="text" class="form-control" name="orgName"  aria-describedby="emailHelp" placeholder="e.g. XYZ Hospital" required>
+              <input type="text" class="form-control text-box" name="orgName"  aria-describedby="emailHelp" placeholder="e.g. XYZ Hospital" required>
              <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small-->
             </div>
             <div class="form-group">
               <label for="exampleInputEmail1">Contact Person Name</label>
-              <input type="text" class="form-control" name="pocName"  aria-describedby="emailHelp" placeholder="e.g. John Doe" required>
+              <input type="text" class="form-control text-box" name="pocName"  aria-describedby="emailHelp" placeholder="e.g. John Doe" required>
              <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small-->
             </div>
             <div class="form-group">
               <label for="exampleInputEmail1">Contact Person Phone Number</label>
-              <input type="text" class="form-control" pattern="^[0-9]{10}$" name="pocNumber" aria-describedby="emailHelp" placeholder="e.g. 9821372343" required>
+              <input type="text" class="form-control text-box" pattern="^[0-9]{10}$" name="pocNumber" aria-describedby="emailHelp" placeholder="e.g. 9821372343" required>
              <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small-->
             <div class="form-group">
               <label for="exampleInputEmail1">Contact Person Email</label>
-              <input type="text" class="form-control" name="pocEmail"  aria-describedby="emailHelp" pattern="^(.+)@(.+)$" placeholder="e.g. john@Doe.org" required>
+              <input type="text" class="form-control text-box" name="pocEmail"  aria-describedby="emailHelp" pattern="^(.+)@(.+)$" placeholder="e.g. john@Doe.org" required>
              <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small-->
             </div>
             </div>
             <div class="form-group">
               <label for="exampleInputEmail1">Designation of the Contact Person?</label>
-              <input type="text" class="form-control"  name="designation"  aria-describedby="emailHelp" placeholder="e.g. CTO" required>
+              <input type="text" class="form-control text-box"  name="designation"  aria-describedby="emailHelp" placeholder="e.g. CTO" required>
              <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small-->
             </div>
             <div class="form-group">
               <label for="exampleInputEmail1">Office Address</label>
-              <input type="text" class="form-control" name="officeaddress"  aria-describedby="emailHelp" placeholder="e.g. Mumbai" required>
+              <input type="text" class="form-control text-box" name="officeaddress"  aria-describedby="emailHelp" placeholder="Enter Full Postal Address" required>
              <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small-->
             </div>
             <div class="form-group">
               <label for="exampleInputEmail1">Supply Location Address</label>
-              <input type="text" class="form-control" name="supplyaddress"  aria-describedby="emailHelp" placeholder="e.g. Raigad District" required>
+              <input type="text" class="form-control text-box" name="supplyaddress"  aria-describedby="emailHelp" placeholder="Enter Full Postal Address" required>
              <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small-->
             </div>
             <div class="form-group">
@@ -240,17 +286,17 @@ var fundingOpts = ['No Funding Required', '50% Funding Required', 'Full Funding 
             </div>
             <div class="form-group">
               <label for="exampleInputEmail1">Proposal Details to Be Shared here..</label>
-              <input type="text" class="form-control" name="proposal"  aria-describedby="emailHelp" placeholder="Please enter your postal address" required>
+              <input type="text" class="form-control text-box" name="proposal"  aria-describedby="emailHelp" placeholder="Enter your Proposal" required>
              <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small-->
             </div>
             <div class="form-group">
-              <label for="exampleInputEmail1">Maximum Quantity that you can supply every week ? (Items that you have selected above)</label>
-              <input type="text" class="form-control" name="maxquantity"  aria-describedby="emailHelp" placeholder="e.g. 400086" required>
+              <label for="exampleInputEmail1">Maximum Quantity that you can supply every week? (Items that you have selected above)</label>
+              <input type="text" class="form-control text-box" name="maxquantity"  aria-describedby="emailHelp" placeholder="100 N95 Masks" required>
              <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small-->
             </div>
              <div class="form-group">
-              <label for="exampleFormControlSelect1">Can You Deliver in India?</label>
-              <select class="form-control" name="yesno" id="yesno"></select>
+              <label for="exampleFormControlSelect1" class="dropdownlabel">Can You Deliver Across India?</label>
+              <select class="form-control dropdown" name="yesno" id="yesno"></select>
             </div>
             <button type="submit" style="text-align:center;margin-top:3%;" class="btn btn-block btn-danger btn-lg">Submit</button>
            </form>
@@ -263,4 +309,7 @@ var fundingOpts = ['No Funding Required', '50% Funding Required', 'Full Funding 
     </div>
   
   </body>
+  <footer>
+  Powered by <a href="http://www.100x.vc">100X.VC</a>
+  </footer>
 </html>

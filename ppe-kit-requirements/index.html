@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     
-    <title>COVID19- PPE Kit Requirement</title>
+    <title>COVID19 - PPE Kit Requirement</title>
     <meta name="viewport" content="width=device-width">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--fonts -->
@@ -17,7 +17,12 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
   <style>
-    
+    footer {
+      vertical-align:center;
+      text-align:center;
+      font-size:0.5em;
+      text-align:center;
+    }
     label{
       font-family: 'Montserrat', sans-serif;
       font-size: 1em;
@@ -50,6 +55,50 @@
       vertical-align:middle;
 
     }
+
+    .text-box {
+      background: inherit;
+      color: #000000;
+      border: none;
+      border-top: none;
+      border-bottom: 2px solid #434343;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      max-width: 100% !important;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    .dropdownspecial {
+      width:auto !important;
+    }
+
+    .dropdown {
+      width:auto !important;
+    }
+
+    .dropdownlabel {
+      float:left;
+      margin-right: 0.3em;
+    }
+
+    @media only screen and (max-width: 600px) {
+      footer {
+        font-size:0.7em;
+      }
+      body {
+        font-size: 15px;
+      }
+      .dropdown {
+        float:right;
+      }
+      .dropdownlabel {
+        margin-right:0px;
+      }
+    }
+
   </style>
   <script>
 
@@ -149,69 +198,69 @@ var fundingOpts = ['No Funding Required', '50% Funding Required', 'Full Funding 
       <div class="col-ld-4">
         <div class="container">
           
-          <p class="lead" style="text-align:center;padding:5%"><h1 style="font-size: 3em; font-family:Oswald;color:#ED1F24;">COVID19- PPE Kit Requirement</h1></p>
+          <h1 style="font-family:Oswald;color:#ED1F24;">COVID19 - PPE Kit Requirement</h1>
 
           <form id="mainForm">
             <div class="form-group">
               <label for="exampleInputEmail1">Organization Name</label>
-              <input type="text" class="form-control" name="orgName"  aria-describedby="emailHelp" placeholder="e.g. XYZ Hospital" required>
+              <input type="text" class="form-control text-box" name="orgName"  aria-describedby="emailHelp" placeholder="e.g. XYZ Hospital" required>
              <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small-->
             </div>
             <div class="form-group">
-              <label for="exampleFormControlSelect1" style="width:auto;">Category</label>
-              <select class="form-control" name="categ" id="categories" style="width:auto;"></select>
+              <label for="exampleFormControlSelect1" class= "dropdownlabel" style="width:auto;">Category</label>
+              <select class="form-control dropdown" name="categ" id="categories" style="width:auto;"></select>
             </div>
             <div class="form-group">
               <label for="exampleInputEmail1">If Others, Please Specify </label>
-              <input type="text" class="form-control" name="otherCateg"  aria-describedby="emailHelp" placeholder="e.g. Non Government Organisation" required>
+              <input type="text" class="form-control text-box" name="otherCateg"  aria-describedby="emailHelp" placeholder="e.g. Non Government Organisation" required>
              <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small-->
             </div>
             <div class="form-group">
               <label for="exampleInputEmail1">No. Of Units Required</label>
-              <input type="text" name="noOfUnits" pattern="^[0-9]+$" class="form-control"  aria-describedby="emailHelp" placeholder="e.g. 100" required>
+              <input type="text" name="noOfUnits" pattern="^[0-9]+$" class="form-control text-box"  aria-describedby="emailHelp" placeholder="e.g. 100" required>
              <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small-->
             </div>
              <div class="form-group">
-              <label for="exampleFormControlSelect1">How Much Funding Required</label>
-              <select class="form-control" name="funding" id="funding"></select>
+              <label for="exampleFormControlSelect1" class="dropdownlabel">How Much Funding Required</label>
+              <select class="form-control dropdownspecial" name="funding" id="funding"></select>
             </div>
             <div class="form-group">
               <label for="exampleInputEmail1">Contact Person Name</label>
-              <input type="text" class="form-control" name="pocName"  aria-describedby="emailHelp" placeholder="e.g. John Doe" required>
+              <input type="text" class="form-control text-box" name="pocName"  aria-describedby="emailHelp" placeholder="e.g. John Doe" required>
              <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small-->
             </div>
             <div class="form-group">
               <label for="exampleInputEmail1">Contact Person Number</label>
-              <input type="text" class="form-control" pattern="^[0-9]{10}$" name="pocNumber" aria-describedby="emailHelp" placeholder="e.g. 9821372343" required>
+              <input type="text" class="form-control text-box" pattern="^[0-9]{10}$" name="pocNumber" aria-describedby="emailHelp" placeholder="e.g. 9821372343" required>
              <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small-->
             </div>
             <div class="form-group">
               <label for="exampleInputEmail1">Designation</label>
-              <input type="text" class="form-control"  name="designation"  aria-describedby="emailHelp" placeholder="e.g. CTO" required>
+              <input type="text" class="form-control text-box"  name="designation"  aria-describedby="emailHelp" placeholder="e.g. CTO" required>
              <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small-->
             </div>
             <div class="form-group">
               <label for="exampleInputEmail1">City Name</label>
-              <input type="text" class="form-control" name="cityName"  aria-describedby="emailHelp" placeholder="e.g. Mumbai" required>
+              <input type="text" class="form-control text-box" name="cityName"  aria-describedby="emailHelp" placeholder="e.g. Mumbai" required>
              <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small-->
             </div>
             <div class="form-group">
               <label for="exampleInputEmail1">District Name</label>
-              <input type="text" class="form-control" name="districtName"  aria-describedby="emailHelp" placeholder="e.g. Raigad District" required>
+              <input type="text" class="form-control text-box" name="districtName"  aria-describedby="emailHelp" placeholder="e.g. Raigad District" required>
              <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small-->
             </div>
              <div class="form-group">
-              <label for="exampleFormControlSelect1">State</label>
-              <select class="form-control" name="state" id="state"></select>
+              <label for="exampleFormControlSelect1" class="dropdownlabel">State:</label>
+              <select class="form-control dropdown" name="state" id="state"></select>
             </div>
             <div class="form-group">
               <label for="exampleInputEmail1">Full Postal Address</label>
-              <input type="text" class="form-control" name="address"  aria-describedby="emailHelp" placeholder="Please enter your postal address" required>
+              <input type="text" class="form-control text-box" name="address"  aria-describedby="emailHelp" placeholder="Please enter your postal address" required>
              <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small-->
             </div>
             <div class="form-group">
               <label for="exampleInputEmail1">PIN Code</label>
-              <input type="text" class="form-control" name="pincode"  aria-describedby="emailHelp" placeholder="e.g. 400086" required>
+              <input type="text" class="form-control text-box" name="pincode"  aria-describedby="emailHelp" placeholder="e.g. 400086" required>
              <!--small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small-->
             </div>
             <button type="submit" style="text-align:center;margin-top:3%;" class="btn btn-block btn-danger btn-lg">Submit</button>
@@ -225,4 +274,7 @@ var fundingOpts = ['No Funding Required', '50% Funding Required', 'Full Funding 
     </div>
   
   </body>
+  <footer >
+  Powered by <a href="http://www.100x.vc">100X.VC</a>
+  </footer>
 </html>
